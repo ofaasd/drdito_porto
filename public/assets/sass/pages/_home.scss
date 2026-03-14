@@ -32,7 +32,7 @@ main {
         }
         // subtitle
         .subtitle{
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 12px;
@@ -50,7 +50,7 @@ main {
         }
         // hero main title
         .hero-title{
-            font-size: 2.5rem;
+            font-size: 2rem;
             line-height: 1.22;
             font-weight: 600;
             margin-bottom: 1.80rem;
@@ -246,7 +246,7 @@ main {
             line-height: 2;
             margin: 25px 0 40px;
             @include lg-up{
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
         }
     }

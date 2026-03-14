@@ -10,13 +10,13 @@
     <!-- Specific Meta
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="keyword" content="resume, portfolio, personal portfolio, cv, template, responsive, html5, css3, creative, clean">
-    <meta name="description" content="BPRO - Personal Resume/vCard Template">
-    <meta name="author" content="Themearray">
+    <meta name="keyword" content="Dito Anurogo, Universitas Muhammadiyah Makassar, general practitioner, medical lecturer, Indonesian author, The Art of Medicine, Encyclopedia of Diseases and Health Disorders, medical books, health sciences, philosophy enthusiast, Gramedia author">
+    <meta name="description" content="Dito Anurogo is a permanent lecturer at the Faculty of Medicine and Health Sciences, Universitas Muhammadiyah Makassar, Indonesia. He is a general practitioner, a philosophy enthusiast, and the author of numerous books published by renowned publishers in Indonesia. His magnum opus, The Art of Medicine , was published by Gramedia and has been distributed internationally through Amazon.com. His work, Encyclopedia of Diseases and Health Disorders , published by CV Pustaka Setia Bandung, spans 448 pages and is widely collected in libraries and schools across Indonesia.">
+    <meta name="author" content="Dito Anurogo">
 
     <!-- Site Title
     ================================================== -->
-    <title>dr.Dito Anurogo</title>
+    <title>Dito Anurogo M.D., M.Sc., Ph.D.</title>
 
     <!-- Site Favicon
     ================================================== -->

@@ -1,10 +1,14 @@
 <?php $__env->startSection('style'); ?>
     <style>
+        body{
+            font-size:10pt !important;
+        }
         .text-blue-900 {
             --tw-text-opacity: 1;
             color: rgb(30 58 138 / var(--tw-text-opacity, 1));
         }
         .text-justify {
+            font-size:11pt !important;
             text-align: justify !important;
         }
         .title_container{
@@ -15,7 +19,7 @@
             font-size: 6cqw !important;
         }
         .title_text2 {
-            font-size: 13pt !important;
+            font-size: 10pt !important;
         }
         ul.custom-list {
             list-style-type: none; /* Menghilangkan bullet point bawaan */
@@ -23,10 +27,11 @@
         }
         ul.custom-list li {
             margin-bottom: 15px;
-            font-size: 18px;
+            
         }
         ul.custom-list li a {
             text-decoration: none;
+            font-size: 10pt !important;
             color: #333;
             display: flex;
             align-items: center;
@@ -45,6 +50,39 @@
             width: 30px;
             text-align: center;
             color: #007bff; /* Warna ikon */
+        }
+        /* 1. Jadikan post-item sebagai flex container agar tingginya seragam */
+        .post-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Memastikan tinggi card penuh mengikuti baris (row) */
+        }
+
+        /* 2. Buat post-body mengisi sisa ruang kosong agar post-footer selalu di bawah */
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto; /* Membiarkan body memanjang sesuai kebutuhan */
+        }
+
+        /* 3. Atur post-content dengan flex agar isinya tersusun rapi */
+        .post-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            justify-content: flex-start; /* Menyusun elemen dari atas ke bawah */
+            /* Opsional: beri jarak antar elemen di dalam content */
+            gap: 10px; 
+        }
+
+        /* 4. Solusi mengatasi teks yang keluar dari box */
+        .post-title, .post-title a {
+            word-wrap: break-word; /* Memaksa kata panjang untuk turun ke baris baru */
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+        .about_me_area .right-info tr td {
+            font-size:10pt !important; 
         }
     </style>
 <?php $__env->stopSection(); ?>
@@ -68,44 +106,44 @@
                         <div class="sub-content  wow animate__animated animate__fadeInUp mt-1 " style="padding-left:0; padding-top:0">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <div class="space-y-6">
-                                <p class="text-lg text-gray-700 leading-relaxed mb-3 text-justify">
+                                <p class="text-sm text-gray-700 leading-relaxed mb-3 text-justify">
                                     
                                     <?php echo $profile->description; ?>
 
                                 </p>
                                 <div class="p-3 rounded-2xl border border-blue-100 " style="background: linear-gradient(to right, #F4F0FD 90%, #FFFFFF);">
-                                    <h4 class="font-bold text-blue-900 mb-4 flex items-center gap-2" style="font-size:14pt;">
+                                    <h4 class="font-bold text-blue-900 mb-4 flex items-center gap-2" >
                                         <i class="fa-solid fa-bullseye text-blue-600"></i> <?php echo e(__('welcome.core_focus')); ?>
 
                                     </h4>
                                     <ul class="grid grid-cols-1 gap-3" style="display:flex; flex-direction: column;">
-                                        <li class="flex items-start gap-3 text-gray-700">
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify" >
                                             <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
                                             <?php echo e(__('welcome.nanoimmunobiotechnomedicine')); ?>
 
                                         </li>
-                                        <li class="flex items-start gap-3 text-gray-700">
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify">
                                             <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
                                             <?php echo e(__('welcome.nanotechnology')); ?>
 
                                         </li>
-                                        <li class="flex items-start gap-3 text-gray-700">
-                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify">
+                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1 text-justify"></i>
                                             <?php echo e(__('welcome.biomedical_research')); ?>
 
                                         </li>
-                                        <li class="flex items-start gap-3 text-gray-700">
-                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify">
+                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1 text-justify"></i>
                                             <?php echo e(__('welcome.immunology')); ?>
 
                                         </li>
-                                        <li class="flex items-start gap-3 text-gray-700">
-                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify">
+                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1 text-justify"></i>
                                             <?php echo e(__('welcome.hematopsychiatry')); ?>
 
                                         </li>
-                                        <li class="flex items-start gap-3 text-gray-700">
-                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1"></i>
+                                        <li class="flex items-start gap-3 text-gray-700 text-justify">
+                                            <i class="fa-solid fa-check-circle text-blue-500 mt-1 text-justify"></i>
                                             <?php echo e(__('welcome.medical_practice')); ?>
 
                                         </li>
@@ -205,10 +243,10 @@
                             <h2>
                                 Dito Anurogo
                             </h2>
-                            <p class="designation">
+                            <p class="designation text-justify">
                             Physician, Researcher, Lecturer,  Professional Trainer, and Writer
                             </p>
-                            <p class="content">
+                            <p class="content text-justify">
                                 With 15+ years of professional experience, I focus on connecting applied biomedical research with public insight through scientific and journalistic communication.
                             </p>
                             <div class="button-groups  wow animate__animated animate__fadeInUp">
@@ -225,43 +263,43 @@
                     <div class="col-lg-6 col-xl-5">
                         <div class="right-info">
                             <!-- about area right content -->
-                            <table class="w-100">
+                            <table width="100%">
                                 <tbody>
                                     <tr>
                                         <td class="name">Name</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">DITO ANUROGO</td>
+                                        
+                                        <td class="value">: DITO ANUROGO</td>
                                     </tr>
                                     <tr>
                                         <td class="name">Nationality</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">INDONESIAN
+                                        
+                                        <td class="value">: INDONESIAN
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="name">NIDN</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">0923078303</td>
+                                        
+                                        <td class="value">: 0923078303</td>
                                     </tr>
                                     <tr>
                                         <td class="name">ID Sinta</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">6198330</td>
+                                        
+                                        <td class="value">: 6198330</td>
                                     </tr>
                                     <tr>
                                         <td class="name">ID Scopus</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">57224408026</td>
+                                        
+                                        <td class="value">: 57224408026</td>
                                     </tr>
                                     <tr>
                                         <td class="name">ID Web of Science</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">AAN64652020</td>
+                                        
+                                        <td class="value">: AAN64652020</td>
                                     </tr>
                                     <tr>
                                         <td class="name">ID ORCID</td>
-                                        <td class="dot">:</td>
-                                        <td class="value">0000000232923139</td>
+                                        
+                                        <td class="value">: 0000000232923139</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -307,7 +345,7 @@
                             </div>
                         </h4>
                         
-                        <p class="content text-justify">
+                        <p class="content text-justify" style="font-size:10pt;">
                             <?php echo $specialty->description; ?>
 
                         </p>
@@ -473,7 +511,7 @@
                                                     <td><img src="<?php echo e(asset('assets/img/blog/president-taiwan.png')); ?>" width="80%" align="center"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><h2>PRESIDENT TAIWAN</h2></td>
+                                                    <td><h3>PRESIDENT TAIWAN</h3></td>
                                                 </tr>
                                                 <tr>
                                                     <td>
