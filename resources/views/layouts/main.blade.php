@@ -10,13 +10,13 @@
     <!-- Specific Meta
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="keyword" content="resume, portfolio, personal portfolio, cv, template, responsive, html5, css3, creative, clean">
-    <meta name="description" content="BPRO - Personal Resume/vCard Template">
-    <meta name="author" content="Themearray">
+    <meta name="keyword" content="Dito Anurogo, Universitas Muhammadiyah Makassar, general practitioner, medical lecturer, Indonesian author, The Art of Medicine, Encyclopedia of Diseases and Health Disorders, medical books, health sciences, philosophy enthusiast, Gramedia author">
+    <meta name="description" content="Dito Anurogo is a permanent lecturer at the Faculty of Medicine and Health Sciences, Universitas Muhammadiyah Makassar, Indonesia. He is a general practitioner, a philosophy enthusiast, and the author of numerous books published by renowned publishers in Indonesia. His magnum opus, The Art of Medicine , was published by Gramedia and has been distributed internationally through Amazon.com. His work, Encyclopedia of Diseases and Health Disorders , published by CV Pustaka Setia Bandung, spans 448 pages and is widely collected in libraries and schools across Indonesia.">
+    <meta name="author" content="Dito Anurogo">
 
     <!-- Site Title
     ================================================== -->
-    <title>dr.Dito Anurogo</title>
+    <title>Dito Anurogo M.D., M.Sc., Ph.D.</title>
 
     <!-- Site Favicon
     ================================================== -->
@@ -37,7 +37,8 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/glightbox.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @yield('style')
 </head>
 
 <body>
@@ -175,17 +176,24 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#protfolio" class="nav-link">
+                <a href="#blog" class="nav-link">
+                    <i class="fal fa-user"></i>
+                    BLOG 
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#award" class="nav-link">
+                    <i class="fal fa-user"></i>
+                    AWARD STORY
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#gallery" class="nav-link">
                     <i class="fal fa-briefcase"></i>
                     GALLERY
                 </a>
             </li>
-            <li class="menu-item">
-                <a href="#blog" class="nav-link">
-                    <i class="fal fa-book"></i>
-                    EXPERIENCE
-                </a>
-            </li>
+            
             <li class="menu-item">
                 <a href="#resume" class="nav-link">
                     <i class="fal fa-id-card"></i>
@@ -198,27 +206,19 @@
                     CONTACT
                 </a>
             </li> -->
-            <!-- <li class="menu-item language-selector">
-  <a href="javascript:void(0)" class="nav-link" id="languageToggle">
-    <i class="fal fa-globe"></i>
-    LANGUAGE
-    <i class="fal fa-angle-down ms-1"></i>
-  </a>
-
-  <ul class="language-dropdown" id="languageMenu">
-    <li data-lang="id"><img src="https://flagcdn.com/w20/id.png"> Indonesia</li>
-    <li data-lang="en"><img src="https://flagcdn.com/w20/gb.png"> English</li>
-    <li data-lang="ar"><img src="https://flagcdn.com/w20/sa.png"> العربية</li>
-    <li data-lang="zh"><img src="https://flagcdn.com/w20/cn.png"> 中文</li>
-    <li data-lang="fr"><img src="https://flagcdn.com/w20/fr.png"> Français</li>
-    <li data-lang="ru"><img src="https://flagcdn.com/w20/ru.png"> Русский</li>
-    <li data-lang="es"><img src="https://flagcdn.com/w20/es.png"> Español</li>
-  </ul>
-</li> -->
-
-
-
+            <!-- <li class="menu-item">
+                <a href="javascript:void(0)" class="nav-link">
+                    <i class="fal fa-globe"></i>
+                    LANGUAGE
+                </a>
+            </li> -->
         </ul>
+
+        <!-- Locale Switcher -->
+        <div class="locale-switcher-sidebar my-4" style="padding-left:7em">
+            <x-locale-switcher />
+        </div>
+
         <!-- copyright content -->
         <div class="copyright-content text-center">
             <p>
@@ -265,91 +265,37 @@
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#protfolio" class="nav-link">
+                <a href="#blog" class="nav-link">
+                    <i class="fal fa-user"></i>
+                    BLOG 
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#award" class="nav-link">
+                    <i class="fal fa-user"></i>
+                    AWARD STORY
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#gallery" class="nav-link">
                     <i class="fal fa-briefcase"></i>
                     GALLERY
                 </a>
             </li>
-            <li class="menu-item">
-                <a href="#blog" class="nav-link">
-                    <i class="fal fa-book"></i>
-                    BLOG
-                </a>
-            </li>
+            
             <li class="menu-item">
                 <a href="#resume" class="nav-link">
                     <i class="fal fa-id-card"></i>
                     RESUME
                 </a>
             </li>
-            <!-- <li class="menu-item">
-                <a href="#contact" class="nav-link">
-                    <i class="fal fa-mailbox"></i>
-                    CONTACT
-                </a>
-            </li> -->
-            <!-- <li class="menu-item language-selector">
-                <a href="javascript:void(0)" class="nav-link" id="languageToggle">
-                    <i class="fal fa-globe"></i>
-                    LANGUAGE
-                    <i class="fal fa-angle-down ms-1"></i>
-                </a>
-
-                <ul class="language-dropdown" id="languageMenu">
-                    <li data-lang="id"><img src="https://flagcdn.com/w20/id.png"> Indonesia</li>
-                    <li data-lang="en"><img src="https://flagcdn.com/w20/gb.png"> English</li>
-                    <li data-lang="ar"><img src="https://flagcdn.com/w20/sa.png"> العربية</li>
-                    <li data-lang="zh"><img src="https://flagcdn.com/w20/cn.png"> 中文</li>
-                    <li data-lang="fr"><img src="https://flagcdn.com/w20/fr.png"> Français</li>
-                    <li data-lang="ru"><img src="https://flagcdn.com/w20/ru.png"> Русский</li>
-                    <li data-lang="es"><img src="https://flagcdn.com/w20/es.png"> Español</li>
-                </ul>
-                </li> -->
         </ul>
-        <!-- 
-        Social Media Icons
-        <div class="social-icon">
-            Icon Item
-            <a href="#" 
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Follow Me On Github"
-                aria-label="github">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.01249 0.867188C3.36635 0.867188 0.410156 3.82572 0.410156 7.47474C0.410156 10.5709 2.54051 13.1616 5.41253 13.8786C5.38172 13.7894 5.36191 13.6858 5.36191 13.5575V12.4282C5.09396 12.4282 4.645 12.4282 4.53221 12.4282C4.0805 12.4282 3.67886 12.2338 3.48409 11.8726C3.26787 11.4712 3.23045 10.8573 2.69456 10.4817C2.53556 10.3567 2.6566 10.2141 2.83982 10.2334C3.17819 10.3292 3.45878 10.5616 3.72288 10.9063C3.98587 11.2515 4.10967 11.3297 4.60099 11.3297C4.83922 11.3297 5.19575 11.3159 5.53137 11.2631C5.71183 10.8044 6.02379 10.3821 6.40508 10.1827C4.2065 9.95643 3.15728 8.86178 3.15728 7.37563C3.15728 6.7358 3.42962 6.11689 3.89234 5.59544C3.74048 5.07785 3.54957 4.02229 3.95066 3.62034C4.93991 3.62034 5.53797 4.26237 5.68157 4.43582C6.17455 4.26677 6.71594 4.17096 7.28484 4.17096C7.85484 4.17096 8.39843 4.26677 8.89251 4.43692C9.03446 4.26457 9.63307 3.62034 10.6245 3.62034C11.0273 4.02285 10.8341 5.08281 10.6806 5.5993C11.1406 6.11964 11.4113 6.7369 11.4113 7.37563C11.4113 8.86068 10.3637 9.95478 8.16845 10.1822C8.77256 10.4977 9.21327 11.3842 9.21327 12.0521V13.5575C9.21327 13.6148 9.20062 13.6561 9.19401 13.7051C11.7667 12.8026 13.6148 10.3578 13.6148 7.47474C13.6148 3.82572 10.6586 0.867188 7.01249 0.867188Z" fill="currentColor"/>
-                </svg>
-            </a>
-            Icon Item
-            <a href="#" 
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Follow Me On Dribble"
-                aria-label="dribble">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.02364 0.148438C3.4373 0.148438 0.519531 3.06851 0.519531 6.65769C0.519531 10.2469 3.4373 13.1669 7.02364 13.1669C10.61 13.1669 13.5278 10.2469 13.5278 6.65769C13.5278 3.06851 10.61 0.148438 7.02364 0.148438ZM7.02364 1.12483C8.37074 1.12483 9.60237 1.60532 10.5603 2.40316C9.66508 3.19187 8.64146 3.8337 7.53749 4.32606C6.96235 3.27925 6.338 2.26419 5.63707 1.30663C6.08073 1.19223 6.5437 1.12483 7.02364 1.12483ZM4.67733 1.65116C5.39681 2.60331 6.03164 3.61926 6.61586 4.66805C5.41403 5.08591 4.14158 5.35584 2.79597 5.35584C2.41625 5.35584 2.04193 5.3305 1.67045 5.29418C2.07951 3.67491 3.19628 2.3458 4.67733 1.65116ZM11.2519 3.09286C12.0517 4.04257 12.537 5.26529 12.5496 6.60493C11.8473 6.42863 11.1134 6.33223 10.357 6.33223C9.76249 6.33223 9.18813 6.40903 8.62553 6.51911C8.42958 6.06482 8.21496 5.62331 7.99418 5.18294C9.1842 4.64435 10.2889 3.94862 11.2519 3.09286ZM7.08144 5.54146C7.28747 5.94871 7.49523 6.35301 7.67913 6.77275C5.70761 7.38987 4.01525 8.64261 2.87981 10.3153C2.02047 9.34054 1.49515 8.06347 1.49515 6.65769C1.49515 6.52282 1.50605 6.39091 1.51547 6.25849C1.93671 6.30171 2.3621 6.33223 2.79597 6.33223C4.30602 6.33223 5.73749 6.02735 7.08144 5.54146ZM10.357 7.30862C11.0883 7.30862 11.7939 7.41256 12.467 7.59594C12.2118 9.09519 11.3606 10.3867 10.1601 11.2148C9.87092 9.93344 9.46613 8.69805 9.00282 7.49169C9.44972 7.41469 9.88774 7.30862 10.357 7.30862ZM8.02911 7.67476C8.53997 8.97682 8.9769 10.3163 9.26959 11.7125C8.58325 12.0176 7.82457 12.1906 7.02364 12.1906C5.72629 12.1906 4.53813 11.7423 3.59628 10.9968C4.62001 9.41676 6.18811 8.2333 8.02911 7.67476Z" fill="currentColor"/>
-                </svg>
-            </a>
-            Icon Item
-            <a href="#" 
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Follow Me On Twitter"
-                aria-label="twitter">
-                <svg viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.89663 10.5044C3.9582 10.4871 3.13153 10.004 2.64 9.27582C2.91344 9.26145 3.17979 9.21804 3.43524 9.14827L3.40178 8.17569C2.37028 7.96889 1.54492 7.18996 1.26923 6.18358C1.54849 6.25967 1.84055 6.3047 2.14106 6.31433L3.8879 6.37034L2.43499 5.39894C1.68787 4.89942 1.19747 4.04693 1.19747 3.08087C1.19747 2.82881 1.2307 2.5851 1.29291 2.35355C2.97455 4.10238 5.29601 5.23104 7.88193 5.36064L8.54326 5.39379L8.39411 4.74865C8.34721 4.54574 8.32204 4.33226 8.32204 4.11302C8.32204 2.57508 9.56809 1.32812 11.1043 1.32812C11.9046 1.32812 12.6271 1.66592 13.1352 2.2078L13.3248 2.41007L13.5968 2.35634C13.8191 2.31243 14.0377 2.25822 14.2519 2.19422C14.1371 2.29118 14.0143 2.37908 13.8847 2.45679L14.2011 3.38211C14.3036 3.36985 14.4054 3.35544 14.5065 3.33892C14.3743 3.45283 14.2372 3.56114 14.0957 3.6634L13.8772 3.82123L13.889 4.09048C13.8948 4.22419 13.8977 4.35856 13.8977 4.49361C13.8977 8.62013 10.763 13.3402 5.0591 13.3402C3.99555 13.3402 2.97721 13.1513 2.03372 12.806C3.2128 12.6016 4.29262 12.1066 5.19609 11.3976L6.30139 10.5303L4.89663 10.5044Z" stroke="currentColor"/>
-                </svg>
-            </a>
-            Icon Item
-            <a href="#" 
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Follow Me On Instagram"
-                aria-label="instagram">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.36087 0.529297C2.24296 0.529297 0.519531 2.25409 0.519531 4.37368V9.69666C0.519531 11.8162 2.24296 13.541 4.36087 13.541H9.67965C11.7976 13.541 13.521 11.8162 13.521 9.69666V4.37368C13.521 2.25409 11.7976 0.529297 9.67965 0.529297H4.36087ZM4.36087 1.12074H9.67965C11.4781 1.12074 12.93 2.57377 12.93 4.37368V9.69666C12.93 11.4966 11.4781 12.9496 9.67965 12.9496H4.36087C2.56239 12.9496 1.11051 11.4966 1.11051 9.69666V4.37368C1.11051 2.57377 2.56239 1.12074 4.36087 1.12074ZM10.5661 2.89507C10.4094 2.89507 10.2591 2.95738 10.1482 3.0683C10.0374 3.17921 9.97514 3.32965 9.97514 3.48651C9.97514 3.64337 10.0374 3.79381 10.1482 3.90472C10.2591 4.01564 10.4094 4.07795 10.5661 4.07795C10.7229 4.07795 10.8732 4.01564 10.984 3.90472C11.0948 3.79381 11.1571 3.64337 11.1571 3.48651C11.1571 3.32965 11.0948 3.17921 10.984 3.0683C10.8732 2.95738 10.7229 2.89507 10.5661 2.89507ZM7.02026 3.78223C5.22864 3.78223 3.7699 5.24212 3.7699 7.03517C3.7699 8.82821 5.22864 10.2881 7.02026 10.2881C8.81189 10.2881 10.2706 8.82821 10.2706 7.03517C10.2706 5.24212 8.81189 3.78223 7.02026 3.78223ZM7.02026 4.37368C8.4925 4.37368 9.67965 5.56176 9.67965 7.03517C9.67965 8.50857 8.4925 9.69666 7.02026 9.69666C5.54802 9.69666 4.36087 8.50857 4.36087 7.03517C4.36087 5.56176 5.54802 4.37368 7.02026 4.37368Z" fill="currentColor" stroke="#5C5D68" stroke-width="0.5"/>
-                </svg>     
-            </a> 
-        </div>-->
+
+        <!-- Locale Switcher Mobile -->
+        <div class="locale-switcher-mobile my-4 px-3" style="padding-left:7em">
+            <x-locale-switcher />
+        </div>
+
         <!-- copyright content -->
         <div class="copyright-content text-center">
             <p>
@@ -424,22 +370,7 @@
         };
     </script>
 
-<script>
-const langToggle = document.getElementById("languageToggle");
-const langMenu = document.getElementById("languageMenu");
 
-langToggle.addEventListener("click", (e) => {
-  e.preventDefault();
-  langMenu.classList.toggle("show");
-});
-
-// klik di luar = nutup
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".language-selector")) {
-    langMenu.classList.remove("show");
-  }
-});
-</script>
 
 
 

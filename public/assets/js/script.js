@@ -38,25 +38,33 @@
     
         // Function to update the active class
         function updateActiveLink() {
-            if (isScrolling) return;
-    
-            var scrollPos = $(window).scrollTop() + $(window).height() / 3; // Check near the middle of the viewport
-            var currentSectionId = '';
-    
-            sections.forEach(function (section) {
-                if (scrollPos >= section.offsetTop) {
-                    currentSectionId = section.id;
+        if (isScrolling) return;
+
+        // Cek posisi scroll mata pengguna saat ini
+        var scrollPos = $(window).scrollTop() + $(window).height() / 3;
+        var currentSectionId = '';
+
+        // Loop langsung dari menu navigasi Anda
+        menuLinks.each(function() {
+            var section = $(this.hash); // Ambil elemen berdasarkan href (misal: #award)
+            
+            // Pastikan section-nya benar-benar ada di HTML
+            if (section.length) {
+                // Cek offset.top secara DINAMIS (bukan dari cache memori)
+                if (scrollPos >= section.offset().top) {
+                    currentSectionId = this.hash; // Simpan ID lengkap beserta pagarnya (misal: "#award")
                 }
-            });
-    
-            // Add active class to the corresponding menu item
-            $('.nav-menu li a').removeClass('active');
-            menuLinks.each(function () {
-                if (this.hash === currentSectionId) {
-                    $(this).addClass('active');
-                }
-            });
+            }
+        });
+
+        // Reset semua menu menjadi tidak aktif
+        $('.nav-menu li a').removeClass('active');
+        
+        // Aktifkan hanya menu yang ID-nya cocok dengan bagian yang sedang dibaca
+        if (currentSectionId) {
+            $('.nav-menu li a[href="' + currentSectionId + '"]').addClass('active');
         }
+    }
     
         // Update active link on scroll
         $(window).on('scroll', updateActiveLink);
