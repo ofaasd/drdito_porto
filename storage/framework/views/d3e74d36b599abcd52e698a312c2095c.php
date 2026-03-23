@@ -471,7 +471,7 @@
 
                 <div class="col-12">
                     <div class="all-blogs-button text-center mt-4">
-                        <a href="#" class="btn-primary-gradient" aria-label="View All Blogs">
+                        <a href="<?php echo e(url('blog')); ?>" class="btn-primary-gradient" aria-label="View All Blogs">
                             View All Blogs
                         </a>
                     </div>
@@ -503,7 +503,11 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 text-center">
-                                            <img src="<?php echo e(asset('assets/img/blog/cover.png')); ?>" width="100%" align="center">
+                                            <div class="lightbox-wrapper">
+                                                <a href="<?php echo e(asset('assets/img/blog/cover.png')); ?>" data-lightbox="award" data-title="My Book Cover">
+                                                    <img src="<?php echo e(asset('assets/img/blog/cover.png')); ?>" width="100%" align="center">
+                                                </a>
+                                            </div>
                                         </div>
                                         <div class="col-md-6">
                                             <table class="table text-center" style="padding:0">
@@ -526,7 +530,9 @@
                                             </table>
                                         </div>
                                         <div class="col-md-12">
-                                            <img src="<?php echo e(asset('assets/img/blog/email.jpeg')); ?>" width="100%" align="center">
+                                            <a href="<?php echo e(asset('assets/img/blog/email.jpeg')); ?>" data-lightbox="award" data-title="My Book Cover">
+                                                <img src="<?php echo e(asset('assets/img/blog/email.jpeg')); ?>" width="100%" align="center">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

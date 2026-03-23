@@ -20,7 +20,7 @@
 
     <!-- Site Favicon
     ================================================== -->
-    <link rel="shortcut icon" href="assets/img/favicon/logoDA.png" >
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon/logoDA.png') }}" >
 
     <!-- Google Fonts
     ================================================== -->
@@ -31,12 +31,12 @@
 
     <!-- All CSS Here
     ================================================== -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/glightbox.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontAwesome5Pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     @yield('style')
 </head>
@@ -116,8 +116,8 @@
     <header class="header-area">
         <div class="logo">
             <a href="index.html">
-                <img src="assets/img/logo/putih.png" class="light" alt="BPRO - Personal Resume/vCard Template">
-                <img src="assets/img/logo/hitam.png" class="dark" alt="BPRO - Personal Resume/vCard Template">
+                <img src="{{ asset('assets/img/logo/putih.png') }}" class="light" alt="BPRO - Personal Resume/vCard Template">
+                <img src="{{ asset('assets/img/logo/hitam.png') }}" class="dark" alt="BPRO - Personal Resume/vCard Template">
             </a>
         </div>
 
@@ -145,8 +145,8 @@
             <!-- logo -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/img/logo/putih.png" class="light" alt="BPRO - Personal Resume/vCard Template">
-                    <img src="assets/img/logo/hitam.png" class="dark" alt="BPRO - Personal Resume/vCard Template">
+                    <img src="{{ asset('assets/img/logo/putih.png') }}" class="light" alt="BPRO - Personal Resume/vCard Template">
+                    <img src="{{ asset('assets/img/logo/hitam.png') }}" class="dark" alt="BPRO - Personal Resume/vCard Template">
                 </a>
             </div>
             <div class="color-mode">
@@ -164,38 +164,38 @@
         <!-- nav menu list -->
         <ul class="nav-menu" id="nav">
             <li class="menu-item">
-                <a href="#home" class="nav-link active">
+                <a href="{{ url('') }}#home" class="nav-link active">
                     <i class="fal fa-home-lg-alt"></i>
                     HOME
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#about" class="nav-link">
+                <a href="{{ url('') }}#about" class="nav-link">
                     <i class="fal fa-user"></i>
                     ABOUT 
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#blog" class="nav-link">
+                <a href="{{ url('') }}#blog" class="nav-link">
                     <i class="fal fa-user"></i>
                     BLOG 
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#award" class="nav-link">
+                <a href="{{ url('') }}#award" class="nav-link">
                     <i class="fal fa-user"></i>
                     AWARD STORY
                 </a>
             </li>
             <li class="menu-item">
-                <a href="#gallery" class="nav-link">
+                <a href="{{ url('') }}#gallery" class="nav-link">
                     <i class="fal fa-briefcase"></i>
                     GALLERY
                 </a>
             </li>
             
             <li class="menu-item">
-                <a href="#resume" class="nav-link">
+                <a href="{{ url('') }}#resume" class="nav-link">
                     <i class="fal fa-id-card"></i>
                     RESUME
                 </a>
@@ -241,8 +241,8 @@
             <!-- logo -->
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/img/logo/putih.png" class="light" alt="BPRO - Personal Resume/vCard Template">
-                    <img src="assets/img/logo/hitam.png" class="dark" alt="BPRO - Personal Resume/vCard Template">
+                    <img src="{{ asset('assets/img/logo/putih.png') }}" class="light" alt="BPRO - Personal Resume/vCard Template">
+                    <img src="{{ asset('assets/img/logo/hitam.png') }}" class="dark" alt="BPRO - Personal Resume/vCard Template">
                 </a>
             </div>
 
@@ -345,19 +345,19 @@
 
     <!-- All The JS Files
     ================================================== -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/circle-progress.min.js"></script>
-    <script src="assets/js/lazysizes.min.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/packery-mode.pkgd.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/circle-progress.min.js') }}"></script>
+    <script src="{{ asset('assets/js/lazysizes.min.js') }}"></script>
+    <script src="{{ asset('assets/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/packery-mode.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
     
     <script>
         //hero image moving js
@@ -369,7 +369,7 @@
             Moving.style.transform = `translate(${positionX}px, ${positionY}px)`;
         };
     </script>
-
+    @yield('local-js')
 
 
 
