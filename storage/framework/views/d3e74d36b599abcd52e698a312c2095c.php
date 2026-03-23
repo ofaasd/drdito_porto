@@ -502,13 +502,13 @@
                                         <h4>My Book Was Received in Person by the President of Taiwan</h4><br />
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <img src="<?php echo e(asset('assets/img/blog/cover.png')); ?>" width="80%" align="center">
+                                        <div class="col-md-6 text-center">
+                                            <img src="<?php echo e(asset('assets/img/blog/cover.png')); ?>" width="100%" align="center">
                                         </div>
                                         <div class="col-md-6">
-                                            <table class="table text-center">
+                                            <table class="table text-center" style="padding:0">
                                                 <tr>
-                                                    <td><img src="<?php echo e(asset('assets/img/blog/president-taiwan.png')); ?>" width="80%" align="center"></td>
+                                                    <td><img src="<?php echo e(asset('assets/img/blog/president-taiwan.png')); ?>" width="100%" align="center"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><h3>PRESIDENT TAIWAN</h3></td>
@@ -526,7 +526,7 @@
                                             </table>
                                         </div>
                                         <div class="col-md-12">
-                                            <img src="<?php echo e(asset('assets/img/blog/email.jpeg')); ?>" width="80%" align="center">
+                                            <img src="<?php echo e(asset('assets/img/blog/email.jpeg')); ?>" width="100%" align="center">
                                         </div>
                                     </div>
                                 </div>
