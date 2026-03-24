@@ -4,7 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AchievementController;
+use App\Http\Controllers\Admin\CertificationController;
+use App\Http\Controllers\Admin\EducationController;
+use App\Http\Controllers\Admin\ExperienceController;
+use App\Http\Controllers\Admin\OrganizationController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\PublicationController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\BlogController;
 
@@ -67,5 +74,12 @@ Route::middleware('auth')->group(function () {
         Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
         // Post Management Routes
         Route::resource('posts', PostController::class);
+        Route::resource('achievements', AchievementController::class);
+        Route::resource('certifications', CertificationController::class);
+        Route::resource('educations', EducationController::class);
+        Route::resource('experiences', ExperienceController::class);
+        Route::resource('organizations', OrganizationController::class);
+        Route::resource('publications', PublicationController::class);
+        Route::resource('profiles', ProfileController::class);
     });
 });

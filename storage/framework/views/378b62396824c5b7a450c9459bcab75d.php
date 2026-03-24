@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Dr.Dito Anurogo</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/bootstrap.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.min.css')); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -76,7 +76,7 @@
 
     <aside class="admin-sidebar">
         <div class="brand">
-            <img src="{{ asset('assets/img/favicon/logoDA.png') }}" alt="logo" style="width:48px;">
+            <img src="<?php echo e(asset('assets/img/favicon/logoDA.png')); ?>" alt="logo" style="width:48px;">
             <div>
                 <div style="font-weight:700;color:#111">dr.Dito</div>
                 <div style="font-size:12px;color:#6b7280">Admin Panel</div>
@@ -84,18 +84,18 @@
         </div>
 
         <nav class="nav flex-column px-1">
-            <a class="{{ request()->routeIs('admin.dashboard') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.dashboard') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-            <a class="{{ request()->routeIs('admin.profiles.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.profiles.index') }}"><i class="fas fa-user"></i> Profile</a>
-            <a class="{{ request()->routeIs('admin.posts.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.posts.index') }}"><i class="fas fa-newspaper"></i> Posts</a>
-            <a class="{{ request()->routeIs('admin.achievements.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.achievements.index') }}"><i class="fas fa-trophy"></i> Achievements</a>
-            <a class="{{ request()->routeIs('admin.educations.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.educations.index') }}"><i class="fas fa-graduation-cap"></i> Educations</a>
-            <a class="{{ request()->routeIs('admin.experiences.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.experiences.index') }}"><i class="fas fa-briefcase"></i> Experiences</a>
-            <a class="{{ request()->routeIs('admin.certifications.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.certifications.index') }}"><i class="fas fa-certificate"></i> Certifications</a>
-            <a class="{{ request()->routeIs('admin.publications.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.publications.index') }}"><i class="fas fa-book-open"></i> Publications</a>
-            <a class="{{ request()->routeIs('admin.organizations.*') ? 'nav-link active' : 'nav-link' }}" href="{{ route('admin.organizations.index') }}"><i class="fas fa-handshake"></i> Organizations</a>
+            <a class="<?php echo e(request()->routeIs('admin.dashboard') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.dashboard')); ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="<?php echo e(request()->routeIs('admin.profiles.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.profiles.index')); ?>"><i class="fas fa-user"></i> Profile</a>
+            <a class="<?php echo e(request()->routeIs('admin.posts.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.posts.index')); ?>"><i class="fas fa-newspaper"></i> Posts</a>
+            <a class="<?php echo e(request()->routeIs('admin.achievements.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.achievements.index')); ?>"><i class="fas fa-trophy"></i> Achievements</a>
+            <a class="<?php echo e(request()->routeIs('admin.educations.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.educations.index')); ?>"><i class="fas fa-graduation-cap"></i> Educations</a>
+            <a class="<?php echo e(request()->routeIs('admin.experiences.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.experiences.index')); ?>"><i class="fas fa-briefcase"></i> Experiences</a>
+            <a class="<?php echo e(request()->routeIs('admin.certifications.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.certifications.index')); ?>"><i class="fas fa-certificate"></i> Certifications</a>
+            <a class="<?php echo e(request()->routeIs('admin.publications.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.publications.index')); ?>"><i class="fas fa-book-open"></i> Publications</a>
+            <a class="<?php echo e(request()->routeIs('admin.organizations.*') ? 'nav-link active' : 'nav-link'); ?>" href="<?php echo e(route('admin.organizations.index')); ?>"><i class="fas fa-handshake"></i> Organizations</a>
             <div class="nav-link">
                 <i class="fas fa-sign-out-alt"></i>
-                <form action="{{ route('admin.logout') }}" method="POST" style="display:inline;margin-left:8px;">@csrf
+                <form action="<?php echo e(route('admin.logout')); ?>" method="POST" style="display:inline;margin-left:8px;"><?php echo csrf_field(); ?>
                     <button class="btn btn-link p-0 m-0 align-baseline" style="color:inherit;border:none;background:none;">Logout</button>
                 </form>
             </div>
@@ -105,24 +105,24 @@
     <header class="admin-topbar">
         <div class="d-flex align-items-center gap-3">
             <button class="btn btn-light d-md-none" id="sidebarToggle"><i class="fas fa-bars"></i></button>
-            <h5 class="mb-0">@yield('title', 'Dashboard')</h5>
+            <h5 class="mb-0"><?php echo $__env->yieldContent('title', 'Dashboard'); ?></h5>
         </div>
 
         <div class="d-flex align-items-center gap-3">
             <div class="text-end me-3">
-                <div style="font-weight:600">{{ Auth::user()->name }}</div>
-                <div style="font-size:12px;color:#6b7280">{{ Auth::user()->email }}</div>
+                <div style="font-weight:600"><?php echo e(Auth::user()->name); ?></div>
+                <div style="font-size:12px;color:#6b7280"><?php echo e(Auth::user()->email); ?></div>
             </div>
-            <img src="{{ asset('assets/img/favicon/logoDA.png') }}" alt="avatar" style="width:40px;border-radius:50%;">
+            <img src="<?php echo e(asset('assets/img/favicon/logoDA.png')); ?>" alt="avatar" style="width:40px;border-radius:50%;">
         </div>
     </header>
 
     <main class="admin-content">
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </main>
 
-    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="<?php echo e(asset('assets/js/jquery-3.6.0.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/bootstrap.min.js')); ?>"></script>
     <script>
         document.getElementById('sidebarToggle')?.addEventListener('click', function() {
             const aside = document.querySelector('.admin-sidebar');
@@ -131,4 +131,4 @@
         });
     </script>
 </body>
-</html>
+</html><?php /**PATH D:\work\app\dokterdito_app\resources\views/admin/layouts/admin.blade.php ENDPATH**/ ?>
