@@ -214,36 +214,13 @@
             </li> -->
         </ul>
 
-        <!-- Locale Switcher -->
-        <div class="locale-switcher-sidebar my-4" style="padding-left:7em">
-            <?php if (isset($component)) { $__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.locale-switcher','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('locale-switcher'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee)): ?>
-<?php $attributes = $__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee; ?>
-<?php unset($__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee)): ?>
-<?php $component = $__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee; ?>
-<?php unset($__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee); ?>
-<?php endif; ?>
-        </div>
+        <!-- Google Translate Widget -->
+        <div id="google_translate_element" style="margin-top: 20px; padding: 0 15px; text-align: center;"></div>
 
         <!-- copyright content -->
-        <div class="copyright-content text-center">
+        <div class="copyright-content" style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
             <p>
-                2026 <a href="index.html">@Dito Anurogo</a>
-            </p>
-            <p>
+                2026 <a href="#">&copy; Dito Anurogo</a><br/>
                 All Rights Reserved
             </p>
         </div>
@@ -309,37 +286,15 @@
                 </a>
             </li>
         </ul>
-
-        <!-- Locale Switcher Mobile -->
-        <div class="locale-switcher-mobile my-4 px-3" style="padding-left:7em">
-            <?php if (isset($component)) { $__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.locale-switcher','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('locale-switcher'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee)): ?>
-<?php $attributes = $__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee; ?>
-<?php unset($__attributesOriginal7b69d71eac2771bb6249ff4d7cc262ee); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee)): ?>
-<?php $component = $__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee; ?>
-<?php unset($__componentOriginal7b69d71eac2771bb6249ff4d7cc262ee); ?>
-<?php endif; ?>
-        </div>
-
+        <!-- Google Translate Widget -->
+        <div id="google_translate_element" style="margin-top: 20px; padding: 0 15px; text-align: center;"></div>
+        
         <!-- copyright content -->
-        <div class="copyright-content text-center">
-            <p>
+        <div class="copyright-content text-center" style="padding-left:4em">
+            <p class="text-center">
                 2026 <a href="index.html">Dito Anurogo</a>
             </p>
-            <p>
+            <p class="text-center">
                 All Rights Reserved
             </p>
         </div>
@@ -408,6 +363,14 @@
         };
     </script>
     <?php echo $__env->yieldContent('local-js'); ?>
+
+    <!-- Google Translate Widget Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'id', includedLanguages: 'id,en,es,fr,de,zh-CN,ja,ar'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
