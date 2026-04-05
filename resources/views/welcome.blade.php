@@ -96,10 +96,10 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <!--hero area left content-->
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-7 order-2 order-md-1">
                     <div class="hero-content text-center text-md-start">
                         <div class="title_container">
-                            <h1 class="hero-title wow animate__animated animate__fadeInUp title_text">
+                            <h1 class="hero-title wow animate__animated animate__fadeInUp title_text" style="margin-top:20px">
                                 {{$profile->full_name}} {{$profile->titles}}
                             </h1>
                         </div>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <!--hero area right image-->
-                <div class="col-10 col-md-5">
+                <div class="col-10 col-md-5 order-1 order-md-2">
                     <div class="hero-img text-center  wow animate__animated animate__fadeInUp">
                         <img id="moving" class="lazyload" src="assets/img/hero/final.png" alt="hero image">
                     </div>
